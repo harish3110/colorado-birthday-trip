@@ -150,6 +150,12 @@
   .tab-content { display: none; }
   .tab-content.active { display: block; }
 
+
+  .venue-links { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .venue-link { font-family: sans-serif; font-size: 10.5px; text-decoration: none; padding: 2px 9px; border-radius: 10px; border: 1px solid; display: inline-flex; align-items: center; gap: 3px; }
+  .venue-link.map-link { color: var(--green); background: var(--green-light); border-color: #c3dbc9; }
+  .venue-link.web-link { color: var(--blue); background: var(--blue-light); border-color: #b8d4ed; }
+
   @media (max-width: 768px) {
     .two-col { grid-template-columns: 1fr; }
     .calendar { grid-template-columns: repeat(3, 1fr); }
@@ -194,7 +200,7 @@
   <h1>Colorado Birthday Trip 🎂</h1>
   <div class="subtitle">Her 30th · June 11–15, 2026 · Denver &amp; Rocky Mountains</div>
   <div class="hero-pills">
-    <span class="pill">✈ Arrive Jun 11 ~3 PM</span>
+    <span class="pill">✈ Jun 11 · Flight 2513 · PHL→DEN · Dep 12:42 PM · Arr 2:56 PM</span>
     <span class="pill">🏠 LoHi Airbnb · 4430 W Hayward Pl</span>
     <span class="pill">🚗 Rental Car</span>
     <span class="pill">🌿 Vegetarian · Gluten-Free Friendly</span>
@@ -222,7 +228,7 @@
         <div class="date-num">11</div>
         <div class="cal-label">Arrival Day</div>
         <div class="cal-items">
-          <div class="cal-dot booked">✈ Arrive ~3 PM</div>
+          <div class="cal-dot booked">✈ Arrive 2:56 PM · F2513</div>
           <div class="cal-dot pending">🎨 Meow Wolf?</div>
           <div class="cal-dot booked">🍽 Gladys (walk-in)</div>
         </div>
@@ -284,12 +290,15 @@
           </div>
           <div class="timeline">
             <div class="tl-item booked">
-              <div class="tl-time">~3 PM</div>
+              <div class="tl-time">2:56 PM</div>
               <div class="tl-body">
                 <div class="tl-card">
                   <div class="tl-name">Arrive DEN · Pick up rental car</div>
-                  <div class="tl-desc">Drive to Airbnb at 4430 W Hayward Pl, LoHi. ~25 min from airport.</div>
+                  <div class="tl-desc">Flight 2513 · PHL→DEN non-stop · Depart PHL 12:42 PM · Arrive DEN 2:56 PM. Pick up car, drive to Airbnb at 4430 W Hayward Pl, LoHi. ~25 min from airport.</div>
                   <div class="tl-tags"><span class="tag confirmed">Confirmed</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Denver+International+Airport+8500+Pena+Blvd+Denver+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,6 +310,10 @@
                   <div class="tl-desc">Immersive art experience. Check day-of ticket availability on phone after landing. ~$50/person.</div>
                   <div class="tl-tags"><span class="tag pending">Check availability</span><span class="tag note">Day-of tickets</span></div>
                   <div class="info-note">💡 If no Meow Wolf: wander LoHi, grab coffee at Rivers &amp; Roads, decompress after travel.</div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=1338+1st+St+Denver+CO+80204" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://convergencestation.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -311,6 +324,10 @@
                   <div class="tl-name">Gladys — Dinner</div>
                   <div class="tl-desc">Walk-in, LoHi neighborhood spot. Relaxed first night. Vegetarian-friendly options.</div>
                   <div class="tl-tags"><span class="tag option">Walk-in</span><span class="tag veg">Veg-friendly</span><span class="tag gf">GF options</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=5505+W+20th+Ave+Edgewater+CO+80214" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://gladysrestaurant.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -334,6 +351,10 @@
                   <div class="tl-name">Moore. Cafe — Birthday Breakfast</div>
                   <div class="tl-desc">Breakfast/brunch, LoHi. Walk from Airbnb. Leisurely morning start.</div>
                   <div class="tl-tags"><span class="tag confirmed">Confirmed</span><span class="tag veg">Veg-friendly</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=3331+N+Downing+St+Denver+CO+80205" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.moorebreadbakery.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -344,6 +365,10 @@
                   <div class="tl-name">Zen'd Out Spa — Couples Massage</div>
                   <div class="tl-desc">Booked. 30th birthday noted with staff. Give plenty of time to get ready before arriving.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag note">Birthday noted</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=1143+Auraria+Pkwy+Denver+CO+80204" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.zendoutmassage.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -354,6 +379,9 @@
                   <div class="tl-name">Wander LoHi</div>
                   <div class="tl-desc">Walk the neighbourhood, browse shops, coffee stop. ~1.5 hr buffer before lunch.</div>
                   <div class="tl-tags"><span class="tag note">Free time</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=LoHi+Lower+Highlands+Denver+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,6 +392,10 @@
                   <div class="tl-name">Mercantile at Union Station — Lunch</div>
                   <div class="tl-desc">Booked. Farm-to-table lunch. Beautiful Union Station setting. GF-friendly menu.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag gf">GF-friendly</span><span class="tag veg">Veg options</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=1701+Wynkoop+St+Denver+CO+80202" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.mercantiledenver.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -374,6 +406,10 @@
                   <div class="tl-name">Explore Union Station + LoDo</div>
                   <div class="tl-desc">Browse the Grand Hall, grab a drink at Terminal Bar or Pigtrain Coffee. Wander 16th St.</div>
                   <div class="tl-tags"><span class="tag note">Free roam</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Union+Station+1701+Wynkoop+St+Denver+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://unionstationindenver.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -384,6 +420,10 @@
                   <div class="tl-name">54thirty Rooftop Bar</div>
                   <div class="tl-desc">Birthday sunset cocktails with Denver skyline views. No reservation needed — arrive early for good seats.</div>
                   <div class="tl-tags"><span class="tag option">Walk-in</span><span class="tag note">Go early for views</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=1475+California+St+Denver+CO+80202" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.54thirty.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -394,6 +434,10 @@
                   <div class="tl-name">Wildflower — Birthday Dinner 🎂</div>
                   <div class="tl-desc">Booked. Fine dining, special occasion spot. GF menu available. Birthday noted.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag gf">GF menu</span><span class="tag veg">Veg options</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=3638+Navajo+St+Denver+CO+80211" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.wildflower-lohi.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -417,6 +461,10 @@
                   <div class="tl-name">Rivers &amp; Roads Coffee — Breakfast</div>
                   <div class="tl-desc">LoHi coffee shop with GF food menu. Good start before a big outdoors day. Breakfast fries!</div>
                   <div class="tl-tags"><span class="tag confirmed">Planned</span><span class="tag gf">GF menu</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=2539+E+Bruce+Randolph+Ave+Denver+CO+80205" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.riversandroadscoffee.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -427,6 +475,10 @@
                   <div class="tl-name">Red Rocks Amphitheatre</div>
                   <div class="tl-desc">Drive 45 min southwest. Hike the trading post trail or just explore the formations. Iconic views.</div>
                   <div class="tl-tags"><span class="tag confirmed">Planned</span><span class="tag note">~45 min from LoHi</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=18300+W+Alameda+Pkwy+Morrison+CO+80465" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.redrocksonline.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -437,6 +489,9 @@
                   <div class="tl-name">Drive to Estes Park (~1.5 hr from Red Rocks)</div>
                   <div class="tl-desc">Scenic drive north through Boulder and up the canyon. Stop in Estes Park for lunch before RMNP entry.</div>
                   <div class="tl-tags"><span class="tag note">~1.5 hr drive</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Estes+Park+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -447,6 +502,9 @@
                   <div class="tl-name">Lunch in Estes Park</div>
                   <div class="tl-desc">Grab lunch before the RMNP timed entry window. See GF backup spots for Estes options.</div>
                   <div class="tl-tags"><span class="tag note">Before RMNP entry</span><span class="tag gf">See GF backups tab</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Downtown+Estes+Park+CO+80517" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -457,6 +515,10 @@
                   <div class="tl-name">Rocky Mountain National Park — Bear Lake Road</div>
                   <div class="tl-desc">Timed entry booked. Stunning alpine scenery, Bear Lake loop is ~0.6 mi easy walk. Bring layers — it gets cold above 9,000 ft even in June.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag note">Bring layers</span><span class="tag note">4–6 PM window</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Bear+Lake+Rocky+Mountain+National+Park+Colorado" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.nps.gov/romo/planyourvisit/blrra.htm" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -481,6 +543,10 @@
                       🍸 <strong>Pre-dinner drinks</strong> — Corrida (rooftop, Spanish, great views) or OAK at Fourteenth — both on Pearl St, both worth a cocktail before Cozobi.
                     </div>
                   </div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Pearl+Street+Mall+Boulder+CO+80302" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.boulderdowntown.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -492,6 +558,10 @@
                   <div class="tl-desc">909 Walnut St, Boulder. 100% dedicated GF Mexican kitchen. Wood-fire cooking rooted in corn nixtamalization. Michelin Bib Gourmand. Perfect end to the RMNP day.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓ 8:45 PM</span><span class="tag gf">100% GF kitchen</span><span class="tag veg">Veg options</span><span class="tag note">Michelin Bib Gourmand</span></div>
                   <div class="info-note">💡 ~30 min drive back to LoHi Airbnb after dinner. Back by ~10 PM.</div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=909+Walnut+St+Boulder+CO+80302" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://cozobi.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -516,6 +586,10 @@
                   <div class="tl-desc">9 Kneale Rd, Eldorado Springs. ~45 min from LoHi. Permit booked 9:30–11:30 AM. Stunning red canyon walls, great trails for two hours. Fowler Trail is easy and scenic; Rattlesnake Gulch is harder with Continental Divide views.</div>
                   <div class="tl-tags"><span class="tag confirmed">Permit booked ✓</span><span class="tag note">Timed entry 9:30–11:30 AM</span><span class="tag note">~45 min drive</span></div>
                   <div class="info-note">💡 Out by 11:30 AM → ~40 min drive to Spice Room. Arrives perfectly for 12:30 PM booking.</div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=9+Kneale+Rd+Eldorado+Springs+CO+80025" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://cpw.state.co.us/placestogo/parks/EldoradoCanyon" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -526,6 +600,10 @@
                   <div class="tl-name">Spice Room — Lunch 🍛</div>
                   <div class="tl-desc">3100 E Colfax Ave, ~5 min from Botanic Gardens. Denver's highest-rated Indian, 4.9★ from 3,200+ reviews. 101 GF options, 15 vegan dishes, Saturday lunch buffet. Perfect post-hike meal.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓ 12:30 PM</span><span class="tag gf">101 GF options</span><span class="tag veg">Full vegan menu</span><span class="tag note">4.9★ · Lunch buffet</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=3100+E+Colfax+Ave+Denver+CO+80206" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.spiceroomdenver.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -536,6 +614,10 @@
                   <div class="tl-name">Denver Botanic Gardens</div>
                   <div class="tl-desc">Beautiful and relaxed afternoon. Summer blooms in June. ~1060 E 14th Ave, Capitol Hill. ~$20/person.</div>
                   <div class="tl-tags"><span class="tag confirmed">Planned</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=1007+York+St+Denver+CO+80206" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.botanicgardens.org" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -546,6 +628,9 @@
                   <div class="tl-name">Pack up Airbnb · Load rental car</div>
                   <div class="tl-desc">After Botanic Gardens, return to Airbnb, pack everything, load bags in the car. Check out properly. You won't be coming back after dinner.</div>
                   <div class="tl-tags"><span class="tag flag">Do this before dinner</span><span class="tag note">No Airbnb return after</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=4430+W+Hayward+Pl+Denver+CO+80212" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -557,6 +642,10 @@
                   <div class="tl-desc">Booked. Caribbean-inspired, vegetarian-forward, beautiful space. Perfect send-off. Bags already in the car — after dinner, drive straight to DEN.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag veg">Vegetarian-forward</span><span class="tag gf">GF options</span></div>
                   <div class="flag-note">⚠ Wrap up by ~9:15 PM to make the airport comfortably.</div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=3236+Tejon+St+Denver+CO+80211" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://www.banguptothee.com" target="_blank" class="venue-link web-link">🌐 Website</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -567,6 +656,9 @@
                   <div class="tl-name">Drive to DEN · Return Rental Car</div>
                   <div class="tl-desc">~25 min drive. Return rental car, check in. 2+ hrs before departure — plenty of buffer.</div>
                   <div class="tl-tags"><span class="tag flag">~25 min drive</span><span class="tag note">Return rental car at DEN</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Denver+International+Airport+8500+Pena+Blvd+Denver+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -577,6 +669,9 @@
                   <div class="tl-name">✈ DEN → PHL Non-stop · Frontier F93340</div>
                   <div class="tl-desc">3h 39m flight. Arrive Philadelphia 5:38 AM. Home by morning — no brutal 3 AM alarm, no connection.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag note">Non-stop</span><span class="tag note">Frontier F93340</span></div>
+                  <div class="venue-links">
+                    <a href="https://maps.google.com/?q=Philadelphia+International+Airport+PHL" target="_blank" class="venue-link map-link">📍 Map</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -953,7 +1048,8 @@
           <div class="logistic-row"><span class="logistic-label">Check-out</span><span class="logistic-val">Jun 14, ~5 PM (before dinner)</span></div>
           <div class="logistic-row"><span class="logistic-label">Rental Car</span><span class="logistic-val">DEN pickup Jun 11 ✓</span></div>
           <div class="logistic-row"><span class="logistic-label">Return Car</span><span class="logistic-val">Jun 14, ~9:15 PM (DEN)</span></div>
-          <div class="logistic-row"><span class="logistic-label">Flight out</span><span class="logistic-val">Jun 14, 11:59 PM · F93340 ✈</span></div>
+          <div class="logistic-row"><span class="logistic-label">Flight in</span><span class="logistic-val">Jun 11 · Flight 2513 · PHL→DEN · Arr 2:56 PM</span></div>
+          <div class="logistic-row"><span class="logistic-label">Flight out</span><span class="logistic-val">Jun 14, 11:59 PM · Flight 3340 · DEN→PHL ✈</span></div>
           <div class="logistic-row"><span class="logistic-label">Arrive PHL</span><span class="logistic-val">Jun 15, 5:38 AM</span></div>
         </div>
         <div class="card" style="margin-top: 20px;">
