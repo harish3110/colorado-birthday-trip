@@ -191,7 +191,7 @@
 <nav>
   <span class="brand">🏔 Colorado '26</span>
   <a href="#itinerary" onclick="showTab('itinerary')">Itinerary</a>
-  <a href="#gluten-free" onclick="showTab('gluten-free')">GF Backups</a>
+  <a href="#gluten-free" onclick="showTab('gluten-free')">Backup Food Spots</a>
   <a href="#tasks" onclick="showTab('tasks')">Tasks</a>
   <a href="#logistics" onclick="showTab('logistics')">Logistics</a>
 </nav>
@@ -212,7 +212,7 @@
 
   <div class="tabs">
     <div class="tab active" onclick="showTab('itinerary')">Itinerary</div>
-    <div class="tab" onclick="showTab('gluten-free')">GF Backup Spots</div>
+    <div class="tab" onclick="showTab('gluten-free')">Backup Food Spots</div>
     <div class="tab" onclick="showTab('tasks')">Open Tasks</div>
     <div class="tab" onclick="showTab('logistics')">Logistics</div>
   </div>
@@ -770,7 +770,7 @@
             <div style="font-family: sans-serif; font-size: 12px;"><strong>Maci Cafe</strong> <span style="color: var(--muted);">· Boulder St</span><br><span style="color: var(--muted);">Italian-run — Lavazza espresso, cannoli, panini. Near Highland Bridge.</span></div>
             <div style="font-family: sans-serif; font-size: 12px;"><strong>Café Zuri</strong> <span style="color: var(--muted);">· 32nd Ave</span><br><span style="color: var(--muted);">European-style, quiet and sophisticated. Perfect slow-morning spot.</span></div>
           </div>
-          <div class="info-note" style="margin-top: 10px;">Full list + Boulder picks (Jun 13) in the <strong>GF Backup Spots</strong> tab ☕</div>
+          <div class="info-note" style="margin-top: 10px;">Full list + Boulder picks (Jun 13) in the <strong>Backup Food Spots</strong> tab ☕</div>
         </div>
 
       </div><!-- end sidebar -->
@@ -779,10 +779,26 @@
 
   <!-- ===== TAB: GF BACKUPS ===== -->
   <div id="tab-gluten-free" class="tab-content">
-    <div class="section-label">Gluten-Free Friendly Restaurants &amp; Cafes — Denver &amp; Estes Park</div>
-    <p style="font-family: sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 24px;">
-      🟣 <strong>GF Dedicated/Safe</strong> = separate prep areas, dedicated fryers, or 100% GF kitchen &nbsp;|&nbsp; 🟢 <strong>GF Friendly</strong> = clearly labeled GF menu, good awareness, shared kitchen &nbsp;|&nbsp; 🔵 <strong>Estes Park</strong>
-    </p>
+    <div style="margin-bottom: 28px;">
+      <h2 style="font-family: sans-serif; font-size: 22px; font-weight: 700; color: var(--text); margin: 0 0 8px 0;">Backup Food Spots</h2>
+      <p style="font-family: sans-serif; font-size: 14px; color: var(--muted); margin: 0 0 16px 0; line-height: 1.6;">
+        All restaurants and cafes vetted for vegetarian + gluten-free. Covers Denver neighborhoods, Boulder (Jun 13), and Estes Park (Jun 13) — plus the best morning coffee spots walkable from the Airbnb.
+      </p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; font-family: sans-serif; font-size: 12px;">
+        <span style="background: var(--purple, #7c3aed)22; color: var(--purple, #7c3aed); border: 1px solid var(--purple, #7c3aed)44; border-radius: 20px; padding: 4px 12px; font-weight: 600;">🟣 GF Dedicated/Safe — separate prep or 100% GF kitchen</span>
+        <span style="background: var(--green)22; color: var(--green); border: 1px solid var(--green)44; border-radius: 20px; padding: 4px 12px; font-weight: 600;">🟢 GF Friendly — labeled menu, good awareness</span>
+        <span style="background: var(--blue)22; color: var(--blue); border: 1px solid var(--blue)44; border-radius: 20px; padding: 4px 12px; font-weight: 600;">🔵 Estes Park / Boulder</span>
+      </div>
+    </div>
+
+    <!-- ☕ COFFEE SECTION HEADER -->
+    <div style="background: linear-gradient(135deg, #78350f18, #92400e10); border: 1px solid #92400e33; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 28px;">☕</span>
+      <div>
+        <div style="font-family: sans-serif; font-weight: 700; font-size: 16px; color: #92400e; letter-spacing: 0.02em;">COFFEE SPOTS</div>
+        <div style="font-family: sans-serif; font-size: 12px; color: var(--muted); margin-top: 2px;">Morning cafes — LoHi walkables &amp; Boulder picks for Jun 13</div>
+      </div>
+    </div>
 
     <!-- COFFEE SECTION -->
     <div style="margin-bottom: 28px;">
@@ -851,6 +867,15 @@
           <div class="gf-desc">Eclectic, cozy coffee house on Pearl Street with live music some evenings. Pastries, snacks, and a warm atmosphere — a great place to catch Bands on the Bricks then grab coffee.</div>
           <div class="gf-tags"><span class="tag note">Live music nights</span><span class="tag note">Near Cozobi</span></div>
         </div>
+      </div>
+    </div>
+
+    <!-- 🍽 FOOD SECTION HEADER -->
+    <div style="background: linear-gradient(135deg, #14532d18, #15803d10); border: 1px solid #15803d33; border-radius: 12px; padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 28px;">🍽</span>
+      <div>
+        <div style="font-family: sans-serif; font-weight: 700; font-size: 16px; color: #15803d; letter-spacing: 0.02em;">FOOD &amp; RESTAURANTS</div>
+        <div style="font-family: sans-serif; font-size: 12px; color: var(--muted); margin-top: 2px;">Vetted vegetarian + gluten-free options — Denver, Estes Park, and Boulder</div>
       </div>
     </div>
 
