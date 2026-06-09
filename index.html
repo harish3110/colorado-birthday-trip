@@ -135,6 +135,7 @@
   .gf-safe { border-left: 3px solid var(--purple); }
   .gf-friendly { border-left: 3px solid var(--green); }
   .gf-estes { border-left: 3px solid var(--blue); }
+  .gf-coffee { border-left: 3px solid var(--accent); }
 
   /* LOGISTICS */
   .logistic-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--bg); font-family: sans-serif; font-size: 12px; }
@@ -393,7 +394,6 @@
                   <div class="tl-name">Wildflower — Birthday Dinner 🎂</div>
                   <div class="tl-desc">Booked. Fine dining, special occasion spot. GF menu available. Birthday noted.</div>
                   <div class="tl-tags"><span class="tag confirmed">Booked ✓</span><span class="tag gf">GF menu</span><span class="tag veg">Veg options</span></div>
-                  <div class="flag-note">⚠ TODO: Call ahead to confirm her 30th birthday so staff can prepare something special.</div>
                 </div>
               </div>
             </div>
@@ -622,13 +622,6 @@
           <div class="task-item">
             <div class="task-cb" onclick="toggleTask(this)"></div>
             <div>
-              <div class="task-text">Call Wildflower — mention her 30th birthday</div>
-              <div class="task-day">Jun 12 dinner · Birthday surprise prep</div>
-            </div>
-          </div>
-          <div class="task-item">
-            <div class="task-cb" onclick="toggleTask(this)"></div>
-            <div>
               <div class="task-text">Check Meow Wolf day-of tickets on phone at landing</div>
               <div class="task-day">Jun 11 · On arrival</div>
             </div>
@@ -671,6 +664,20 @@
           </div>
         </div>
 
+        <!-- COFFEE SPOTS -->
+        <div class="card">
+          <h3>☕ Morning Coffee (Walkable)</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Hearth Bakery + Coffee</strong> <span style="color: var(--muted);">· 32nd Ave</span><br><span style="color: var(--muted);">World-class pastries + expert roasts. THE corner spot in the Highlands.</span></div>
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Method Coffee Roasters</strong> <span style="color: var(--muted);">· LoHi</span><br><span style="color: var(--muted);">Excellent cortados, slow-morning vibe. Great place to linger over the first coffee of the day.</span></div>
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Little Owl Coffee</strong> <span style="color: var(--muted);">· LoHi</span><br><span style="color: var(--muted);">Single-origin international beans, cozy. Cortado + morning bun is the move.</span></div>
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Red Silo Coffee Roasters</strong> <span style="color: var(--muted);">· Platte St</span><br><span style="color: var(--muted);">House-roasted, inventive seasonal drinks. Great patio.</span></div>
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Maci Cafe</strong> <span style="color: var(--muted);">· Boulder St</span><br><span style="color: var(--muted);">Italian-run — Lavazza espresso, cannoli, panini. Near Highland Bridge.</span></div>
+            <div style="font-family: sans-serif; font-size: 12px;"><strong>Café Zuri</strong> <span style="color: var(--muted);">· 32nd Ave</span><br><span style="color: var(--muted);">European-style, quiet and sophisticated. Perfect slow-morning spot.</span></div>
+          </div>
+          <div class="info-note" style="margin-top: 10px;">Full list + Boulder picks (Jun 13) in the <strong>GF Backup Spots</strong> tab ☕</div>
+        </div>
+
       </div><!-- end sidebar -->
     </div><!-- end two-col -->
   </div><!-- end tab-itinerary -->
@@ -681,6 +688,76 @@
     <p style="font-family: sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 24px;">
       🟣 <strong>GF Dedicated/Safe</strong> = separate prep areas, dedicated fryers, or 100% GF kitchen &nbsp;|&nbsp; 🟢 <strong>GF Friendly</strong> = clearly labeled GF menu, good awareness, shared kitchen &nbsp;|&nbsp; 🔵 <strong>Estes Park</strong>
     </p>
+
+    <!-- COFFEE SECTION -->
+    <div style="margin-bottom: 28px;">
+      <div class="section-label">☕ Morning Coffee — LoHi &amp; Highlands (walkable from Airbnb)</div>
+      <p style="font-family: sans-serif; font-size: 12px; color: var(--muted); margin-bottom: 16px;">All walkable or a very short stroll from 4430 W Hayward Pl. Great for slow mornings before the day starts.</p>
+      <div class="gf-grid">
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">Highlands · 32nd Ave · Breakfast</div>
+          <h4>Hearth Bakery + Coffee Shop</h4>
+          <div class="gf-desc">The cornerstone morning spot in the neighborhood — occupies an iconic corner on 32nd Ave. World-class pastries, expert espresso roasts. Best for a proper sit-down start to the day.</div>
+          <div class="gf-tags"><span class="tag note">32nd Ave · Iconic spot</span><span class="tag note">Walkable</span></div>
+        </div>
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">LoHi · Morning</div>
+          <h4>Method Coffee Roasters</h4>
+          <div class="gf-desc">Excellent cortados, no-rush atmosphere. The kind of place designed for arriving early and settling in. Great single-origin pour-overs alongside espresso drinks.</div>
+          <div class="gf-tags"><span class="tag note">Best cortado in LoHi</span><span class="tag note">Walkable</span></div>
+        </div>
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">LoHi · Morning</div>
+          <h4>Little Owl Coffee</h4>
+          <div class="gf-desc">Curated single-origin beans from Colombia/Brazil, Guatemala, and Rwanda. Cozy and personal. The cortado + morning bun is the go-to order locals swear by.</div>
+          <div class="gf-tags"><span class="tag note">Single-origin focus</span><span class="tag note">Walkable</span></div>
+        </div>
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">LoHi · Platte St · Morning</div>
+          <h4>Red Silo Coffee Roasters</h4>
+          <div class="gf-desc">House-roasted beans, inventive seasonal drinks (Butter Pecan Latte, Dirty Chai). Roomy with a great patio. Good pick for a longer morning with pastries and fresh burritos.</div>
+          <div class="gf-tags"><span class="tag note">House-roasted</span><span class="tag note">Great patio</span></div>
+        </div>
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">LoHi · Boulder St · Breakfast</div>
+          <h4>Maci Cafe</h4>
+          <div class="gf-desc">Italian-run corner cafe near the Highland Bridge. Lavazza espresso, locally roasted drip, cannoli, croissants, Italian panini. Charming indoor/outdoor seating — feels like a European morning.</div>
+          <div class="gf-tags"><span class="tag note">Italian-run</span><span class="tag note">Near Highland Bridge</span></div>
+        </div>
+        <div class="gf-card gf-coffee">
+          <div class="neighborhood">Highlands · 32nd Ave · Morning</div>
+          <h4>Café Zuri</h4>
+          <div class="gf-desc">European-style gem on 32nd Ave — quiet, sophisticated, great for sitting with a coffee and watching the neighborhood wake up. Consistently high-rated for atmosphere.</div>
+          <div class="gf-tags"><span class="tag note">European vibes</span><span class="tag note">Walkable</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOULDER COFFEE -->
+    <div style="margin-bottom: 28px;">
+      <div class="section-label">☕ Boulder Coffee — Pearl Street (Jun 13 · Pre-dinner)</div>
+      <p style="font-family: sans-serif; font-size: 12px; color: var(--muted); margin-bottom: 16px;">You'll arrive in Boulder ~6:45 PM with ~2 hrs before Cozobi. These are steps from Pearl Street and the dinner spot.</p>
+      <div class="gf-grid">
+        <div class="gf-card gf-estes">
+          <div class="neighborhood">Boulder · Pearl Street · Specialty</div>
+          <h4>Boxcar Coffee Roasters</h4>
+          <div class="gf-desc">One of Boulder's best specialty roasters on Pearl Street. Single-origin offerings, beautiful light-filled space. Great stop after wandering and before dinner.</div>
+          <div class="gf-tags"><span class="tag note">Pearl Street</span><span class="tag gf">GF-friendly</span></div>
+        </div>
+        <div class="gf-card gf-estes">
+          <div class="neighborhood">Boulder · Pearl Street · Classic</div>
+          <h4>Ozo Coffee Co.</h4>
+          <div class="gf-desc">Boulder staple with multiple locations. Pearl Street spot is walkable from Cozobi. Quality espresso drinks and cold brew, relaxed vibe — a reliable classic.</div>
+          <div class="gf-tags"><span class="tag note">Boulder staple</span><span class="tag note">Pearl Street</span></div>
+        </div>
+        <div class="gf-card gf-estes">
+          <div class="neighborhood">Boulder · Pearl Street · Ambience</div>
+          <h4>The Laughing Goat</h4>
+          <div class="gf-desc">Eclectic, cozy coffee house on Pearl Street with live music some evenings. Pastries, snacks, and a warm atmosphere — a great place to catch Bands on the Bricks then grab coffee.</div>
+          <div class="gf-tags"><span class="tag note">Live music nights</span><span class="tag note">Near Cozobi</span></div>
+        </div>
+      </div>
+    </div>
 
     <div style="margin-bottom: 28px;">
       <div class="section-label">Denver — LoHi (walkable from Airbnb)</div>
@@ -796,13 +873,6 @@
         </div>
         <div class="card" style="margin-top: 20px;">
           <h3>🟡 To Do Before Trip</h3>
-          <div class="task-item">
-            <div class="task-cb" onclick="toggleTask(this)"></div>
-            <div>
-              <div class="task-text">Call Wildflower — mention her 30th birthday for special prep</div>
-              <div class="task-day">Jun 12, 8 PM booking</div>
-            </div>
-          </div>
           <div class="task-item">
             <div class="task-cb" onclick="toggleTask(this)"></div>
             <div>
