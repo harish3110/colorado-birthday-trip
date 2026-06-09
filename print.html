@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorado Birthday Trip · Print · June 11–15, 2026</title>
+<style>
+  :root {
+    --accent: #c47c3e;
+    --green: #4a7c59;
+    --red: #c0392b;
+    --text: #1a1a1a;
+    --muted: #6b6560;
+    --border: #ddd8d0;
+    --bg: #faf9f7;
+    --tag-bg: #f0e8d8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Georgia', serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: var(--text);
+    background: white;
+    padding: 0;
+  }
+
+  /* ─── COVER PAGE ─────────────────────────────────────────── */
+  .cover {
+    page-break-after: always;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 72px 60px;
+    background: linear-gradient(160deg, #2c1810 0%, #5c3420 50%, #8b5e3c 100%);
+    color: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cover-top {}
+  .cover-label {
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 18px;
+  }
+  .cover h1 {
+    font-size: 38pt;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .cover h1 span { color: #e8a96b; }
+  .cover .dates {
+    font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+  .cover-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cover-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: rgba(255,255,255,0.85);
+  }
+  .cover-pill::before { content: '·'; color: #e8a96b; font-size: 16pt; line-height: 1; }
+  .cover-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .cover-stat .label {
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 4px;
+  }
+  .cover-stat .val {
+    font-family: Arial, sans-serif;
+    font-size: 10.5pt;
+    color: white;
+    font-weight: 600;
+  }
+
+  /* ─── MAIN PAGES ─────────────────────────────────────────── */
+  .page {
+    padding: 48px 56px 40px;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ─── SECTION HEADER ─────────────────────────────────────── */
+  .page-title {
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 28px;
+  }
+  .page-title span { color: var(--accent); font-weight: 700; }
+
+  /* ─── DAY BLOCK ──────────────────────────────────────────── */
+  .day-block {
+    margin-bottom: 32px;
+  }
+  .day-block:last-child { margin-bottom: 0; }
+
+  .day-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .day-num {
+    font-size: 24pt;
+    font-weight: bold;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 40px;
+  }
+  .day-meta {}
+  .day-title {
+    font-size: 12pt;
+    font-weight: normal;
+    color: var(--text);
+  }
+  .day-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 8.5pt;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  /* ─── TIMELINE ───────────────────────────────────────────── */
+  .timeline { display: flex; flex-direction: column; }
+  .tl {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    min-height: 36px;
+  }
+  .tl-t {
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    color: var(--muted);
+    padding-top: 10px;
+    text-align: right;
+    padding-right: 14px;
+    white-space: nowrap;
+  }
+  .tl-c {
+    border-left: 1.5px solid var(--border);
+    padding: 0 0 14px 16px;
+    position: relative;
+  }
+  .tl-c::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--border);
+    position: absolute;
+    left: -4.5px;
+    top: 12px;
+  }
+  .tl.booked .tl-c::before { background: var(--green); }
+  .tl.flag .tl-c::before { background: var(--red); }
+  .tl.note .tl-c::before { background: var(--accent); }
+  .tl:last-child .tl-c { border-color: transparent; }
+
+  .tl-name {
+    font-weight: bold;
+    font-size: 10pt;
+    margin-top: 8px;
+    margin-bottom: 1px;
+  }
+  .tl-desc {
+    font-family: Arial, sans-serif;
+    font-size: 8.5pt;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .tl-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  .tag {
+    font-family: Arial, sans-serif;
+    font-size: 7.5pt;
+    padding: 1px 7px;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .tag.booked { background: #e8f2ea; color: var(--green); }
+  .tag.pending { background: #fef6e4; color: #d4820a; }
+  .tag.gf { background: #f0e8ff; color: #6b4c9a; }
+  .tag.veg { background: #e8f2ea; color: var(--green); }
+  .tag.warn { background: #fdf0ee; color: var(--red); }
+  .tag.note { background: #f5ede0; color: var(--accent); }
+
+  .flag-row {
+    background: #fdf0ee;
+    border-left: 2px solid var(--red);
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 8.5pt;
+    color: var(--red);
+    margin-top: 5px;
+  }
+  .info-row {
+    background: #eaf2fb;
+    border-left: 2px solid #2d6a9f;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 8.5pt;
+    color: #2d6a9f;
+    margin-top: 5px;
+  }
+
+  /* ─── BOOKINGS TABLE ─────────────────────────────────────── */
+  .bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+    margin-bottom: 24px;
+  }
+  .bookings-table th {
+    background: var(--bg);
+    font-size: 7.5pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 7px 10px;
+    text-align: left;
+    border-bottom: 1.5px solid var(--border);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .bookings-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .bookings-table tr:last-child td { border-bottom: none; }
+  .bookings-table .check { color: var(--green); font-weight: bold; }
+  .bookings-table .day-tag {
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: var(--accent);
+  }
+
+  /* ─── TWO-COL LAYOUT ─────────────────────────────────────── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* ─── SMALL SECTION LABEL ────────────────────────────────── */
+  .section-lbl {
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    margin-top: 18px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-lbl:first-child { margin-top: 0; }
+
+  /* ─── LOGISTICS ROWS ─────────────────────────────────────── */
+  .logi-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px dotted var(--border);
+    font-family: Arial, sans-serif;
+    font-size: 9pt;
+  }
+  .logi-row:last-child { border-bottom: none; }
+  .logi-row .lbl { color: var(--muted); }
+  .logi-row .val { font-weight: 600; text-align: right; }
+
+  /* ─── GF BACKUP LIST ─────────────────────────────────────── */
+  .gf-item {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: start;
+  }
+  .gf-item:last-child { border-bottom: none; }
+  .gf-name { font-weight: bold; font-size: 9.5pt; }
+  .gf-detail { font-family: Arial, sans-serif; font-size: 8pt; color: var(--muted); margin-top: 1px; }
+  .gf-badge {
+    font-family: Arial, sans-serif;
+    font-size: 7.5pt;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .gf-badge.safe { background: #e8f2ea; color: var(--green); }
+  .gf-badge.friendly { background: #f0e8ff; color: #6b4c9a; }
+  .gf-badge.estes { background: #eaf2fb; color: #2d6a9f; }
+
+  /* ─── FOOTER ─────────────────────────────────────────────── */
+  .footer {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ─── PRINT SPECIFICS ─────────────────────────────────────── */
+  @media print {
+    body { font-size: 10pt; }
+    .cover { min-height: 100vh; }
+    .page { padding: 36px 48px 32px; }
+    a { text-decoration: none; color: inherit; }
+    @page {
+      size: letter;
+      margin: 0;
+    }
+  }
+
+  /* ─── SCREEN PREVIEW ─────────────────────────────────────── */
+  @media screen {
+    body { background: #e8e4dc; padding: 24px; }
+    .cover, .page {
+      background: white;
+      max-width: 816px;
+      margin: 0 auto 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      border-radius: 4px;
+    }
+    .cover { min-height: 700px; border-radius: 4px; }
+    .print-btn {
+      display: block;
+      text-align: center;
+      margin: 0 auto 24px;
+      max-width: 816px;
+    }
+    .print-btn button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+    }
+    .print-btn button:hover { background: #b06e33; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-btn"><button onclick="window.print()">🖨 Print Itinerary</button></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     COVER PAGE
+═══════════════════════════════════════════════════════ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-label">Trip Itinerary &nbsp;·&nbsp; Private &amp; Confidential</div>
+    <h1>Colorado <span>Birthday</span><br>Trip 2026</h1>
+    <div class="dates">June 11 – 15, 2026 &nbsp;·&nbsp; Denver &amp; the Rockies</div>
+    <div class="cover-pills">
+      <div class="cover-pill">Her 30th Birthday — Thursday, June 12</div>
+      <div class="cover-pill">LoHi Airbnb · 4430 W Hayward Pl, Denver</div>
+      <div class="cover-pill">Rental car from DEN · Return Jun 14 evening</div>
+      <div class="cover-pill">Fully vegetarian · Gluten-free friendly throughout</div>
+      <div class="cover-pill">Flight home: Jun 14, 11:59 PM · Frontier F93340 · DEN→PHL non-stop</div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-stat">
+      <div class="label">Arrive</div>
+      <div class="val">Jun 11 ~3 PM · DEN</div>
+    </div>
+    <div class="cover-stat">
+      <div class="label">5 Days</div>
+      <div class="val">Denver + RMNP + Boulder</div>
+    </div>
+    <div class="cover-stat">
+      <div class="label">Depart</div>
+      <div class="val">Jun 14, 11:59 PM · DEN</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 1: CONFIRMED BOOKINGS + DAY 11
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-title"><span>All Confirmed Bookings</span> &nbsp;·&nbsp; Colorado June 2026</div>
+
+  <table class="bookings-table">
+    <thead>
+      <tr>
+        <th>Date &amp; Time</th>
+        <th>Booking</th>
+        <th>Notes</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="day-tag">Jun 12 · 10 AM</span></td>
+        <td><strong>Zen'd Out Spa</strong> — Couples Massage</td>
+        <td>30th birthday noted with staff</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 12 · 1 PM</span></td>
+        <td><strong>Mercantile at Union Station</strong></td>
+        <td>Farm-to-table lunch, GF-friendly</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 12 · 8 PM</span></td>
+        <td><strong>Wildflower</strong> — Birthday Dinner 🎂</td>
+        <td>Call ahead to mention her 30th</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 13 · 4–6 PM</span></td>
+        <td><strong>RMNP Bear Lake Road</strong> — Timed Entry</td>
+        <td>Bring layers, 9,000 ft elevation</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 13 · 8:45 PM</span></td>
+        <td><strong>Cozobi Fonda Fina</strong> — Boulder</td>
+        <td>100% GF kitchen · Michelin Bib Gourmand</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 14 · 9:30 AM</span></td>
+        <td><strong>Eldorado Canyon State Park</strong> — Permit</td>
+        <td>Timed entry 9:30–11:30 AM · Sat requires vehicle reservation</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 14 · 12:30 PM</span></td>
+        <td><strong>Spice Room</strong> — Indian Lunch</td>
+        <td>3100 E Colfax · 4.9★ · Lunch buffet Sat · 101 GF options</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 14 · 7:30 PM</span></td>
+        <td><strong>Bang Up To The Elephant</strong> — Final Dinner</td>
+        <td>Bags in car before dinner — no Airbnb return after</td>
+        <td class="check">✓ Booked</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 11 · Arrival</span></td>
+        <td><strong>Rental Car</strong> — DEN pickup</td>
+        <td>Return DEN Jun 14 ~9:15 PM</td>
+        <td class="check">✓ Confirmed</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 11–14</span></td>
+        <td><strong>Airbnb</strong> — 4430 W Hayward Pl, LoHi</td>
+        <td>Check out Jun 14 ~5 PM (before dinner)</td>
+        <td class="check">✓ Confirmed</td>
+      </tr>
+      <tr>
+        <td><span class="day-tag">Jun 14 · 11:59 PM</span></td>
+        <td><strong>Frontier F93340</strong> — DEN→PHL Non-stop</td>
+        <td>Arrive PHL 5:38 AM · 3h 39m</td>
+        <td class="check">✓ Confirmed</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- DAY 11 -->
+  <div class="day-block">
+    <div class="day-head">
+      <div class="day-num">11</div>
+      <div class="day-meta">
+        <div class="day-title">Wednesday — Arrival Day</div>
+        <div class="day-subtitle">Denver · LoHi settle-in · Dinner walk-in</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl booked">
+        <div class="tl-t">~3 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Arrive DEN · Pick up rental car</div>
+          <div class="tl-desc">Drive to 4430 W Hayward Pl, LoHi. ~25 min from airport.</div>
+          <div class="tl-tags"><span class="tag booked">Confirmed</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~4:30 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">🎈 Set up birthday decorations at Airbnb</div>
+          <div class="tl-desc">30 balloons, happy birthday banner, handwritten note. While she freshens up.</div>
+          <div class="tl-tags"><span class="tag note">Surprise prep</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~5 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Meow Wolf Denver (Convergence Station)</div>
+          <div class="tl-desc">Check day-of ticket availability on phone after landing. ~$50/person. If no tickets: wander LoHi, grab coffee at Rivers &amp; Roads.</div>
+          <div class="tl-tags"><span class="tag pending">Check availability</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~8 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Gladys — Dinner</div>
+          <div class="tl-desc">LoHi neighborhood spot, walk-in. Vegetarian-friendly, GF options. Easy first night.</div>
+          <div class="tl-tags"><span class="tag note">Walk-in</span><span class="tag veg">Veg-friendly</span><span class="tag gf">GF options</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 2: DAY 12 — THE 30TH BIRTHDAY
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-title"><span>June 12 · Thursday</span> &nbsp;·&nbsp; 🎂 The 30th Birthday</div>
+
+  <div class="day-block">
+    <div class="day-head">
+      <div class="day-num">12</div>
+      <div class="day-meta">
+        <div class="day-title"><strong>Thursday — The 30th Birthday 🎂</strong></div>
+        <div class="day-subtitle">Denver · LoHi + Union Station · All bookings confirmed ✅</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl booked">
+        <div class="tl-t">Morning</div>
+        <div class="tl-c">
+          <div class="tl-name">Moore. Cafe — Birthday Breakfast</div>
+          <div class="tl-desc">Breakfast/brunch in LoHi. Walk from Airbnb. Leisurely morning start.</div>
+          <div class="tl-tags"><span class="tag booked">Planned</span><span class="tag veg">Veg-friendly</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">10 AM</div>
+        <div class="tl-c">
+          <div class="tl-name">Zen'd Out Spa — Couples Massage</div>
+          <div class="tl-desc">30th birthday noted with staff. Give plenty of time to get ready beforehand.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag note">Birthday noted</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">Midday</div>
+        <div class="tl-c">
+          <div class="tl-name">Wander LoHi</div>
+          <div class="tl-desc">Browse shops, grab a coffee. ~1.5 hr buffer before lunch.</div>
+          <div class="tl-tags"><span class="tag note">Free time</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">1 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Mercantile at Union Station — Lunch</div>
+          <div class="tl-desc">Farm-to-table lunch in Union Station Grand Hall. GF-friendly menu.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag gf">GF-friendly</span><span class="tag veg">Veg options</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~3 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Explore Union Station + LoDo</div>
+          <div class="tl-desc">Browse the Grand Hall, Terminal Bar or Pigtrain Coffee, wander 16th St.</div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">~5:30 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">54thirty Rooftop Bar — Sunset Cocktails</div>
+          <div class="tl-desc">Denver skyline views. No reservation — arrive early for good seats.</div>
+          <div class="tl-tags"><span class="tag note">Walk-in · Arrive early</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">8 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Wildflower — Birthday Dinner 🎂</div>
+          <div class="tl-desc">Fine dining, special occasion. GF menu available. Birthday noted with staff.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag gf">GF menu</span><span class="tag veg">Veg options</span></div>
+          <div class="flag-row">⚠ Call ahead to confirm her 30th so staff can prepare something special.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 3: DAY 13 — RED ROCKS + RMNP + BOULDER
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-title"><span>June 13 · Friday</span> &nbsp;·&nbsp; Red Rocks + Rocky Mountain National Park + Boulder</div>
+
+  <div class="day-block">
+    <div class="day-head">
+      <div class="day-num">13</div>
+      <div class="day-meta">
+        <div class="day-title">Friday — Red Rocks + RMNP + Boulder</div>
+        <div class="day-subtitle">LoHi → Red Rocks → Estes Park → RMNP → Boulder → Cozobi 8:45 PM</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl booked">
+        <div class="tl-t">Morning</div>
+        <div class="tl-c">
+          <div class="tl-name">Rivers &amp; Roads Coffee — Breakfast</div>
+          <div class="tl-desc">LoHi coffee shop with GF food menu. Walk from Airbnb. Breakfast fries!</div>
+          <div class="tl-tags"><span class="tag gf">GF menu</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">~9:30 AM</div>
+        <div class="tl-c">
+          <div class="tl-name">Red Rocks Amphitheatre</div>
+          <div class="tl-desc">Drive 45 min SW. Hike the Trading Post Trail or explore the formations. Iconic views.</div>
+          <div class="tl-tags"><span class="tag note">~45 min from LoHi</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~12 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Drive to Estes Park</div>
+          <div class="tl-desc">~1.5 hr from Red Rocks. Scenic drive north through Boulder and up the canyon.</div>
+          <div class="tl-tags"><span class="tag note">~1.5 hr drive</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~2 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Lunch in Estes Park</div>
+          <div class="tl-desc">Bird &amp; Jim, Wapiti Grill (owner has celiac, safest option), or Poppy's Pizza. See GF backup list.</div>
+          <div class="tl-tags"><span class="tag gf">GF options — see backup list</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">4–6 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Rocky Mountain National Park — Bear Lake Road 🏔</div>
+          <div class="tl-desc">Timed entry booked. Bear Lake loop is ~0.6 mi easy walk. Stunning alpine scenery.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag warn">Bring layers — cold at 9,000 ft</span></div>
+        </div>
+      </div>
+      <div class="tl note">
+        <div class="tl-t">~6:45 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Boulder — Pearl Street &amp; Around</div>
+          <div class="tl-desc">Boulder sits right on the US-36 route home — not a detour. ~45 min from RMNP. ~2 hrs before dinner.</div>
+          <div class="tl-tags"><span class="tag note">On route, not a detour</span></div>
+          <div class="info-row">🎶 <strong>Bands on the Bricks</strong> — Free outdoor concerts on Pearl Street Mall, Jun 10–Jul 29, 5:30–9 PM. You'll catch the tail end live.</div>
+          <div class="info-row">🍸 Pre-dinner cocktails at <strong>Corrida</strong> (rooftop, Spanish views) or <strong>OAK at Fourteenth</strong> — both steps from Cozobi on Pearl St.</div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">8:45 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Cozobi Fonda Fina — Dinner 🌮</div>
+          <div class="tl-desc">909 Walnut St, Boulder. 100% dedicated GF Mexican kitchen. Wood-fire, corn nixtamalization. Michelin Bib Gourmand.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓ 8:45 PM</span><span class="tag gf">100% GF kitchen</span><span class="tag veg">Veg options</span><span class="tag note">Michelin Bib Gourmand</span></div>
+          <div class="info-row">💡 ~30 min drive back to LoHi Airbnb after dinner. Back by ~10 PM.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 4: DAY 14 — FINAL FULL DAY + DEPARTURE
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-title"><span>June 14 · Saturday</span> &nbsp;·&nbsp; Final Full Day · Departure 11:59 PM</div>
+
+  <div class="day-block">
+    <div class="day-head">
+      <div class="day-num">14</div>
+      <div class="day-meta">
+        <div class="day-title">Saturday — Final Full Day</div>
+        <div class="day-subtitle">Eldorado Canyon → Spice Room → Botanic Gardens → Bang Up → DEN 11:59 PM</div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl booked">
+        <div class="tl-t">9:30–11:30 AM</div>
+        <div class="tl-c">
+          <div class="tl-name">Eldorado Canyon State Park 🏔</div>
+          <div class="tl-desc">9 Kneale Rd, Eldorado Springs. ~45 min from LoHi. Fowler Trail is easy and scenic. Rattlesnake Gulch is harder with Continental Divide views.</div>
+          <div class="tl-tags"><span class="tag booked">Permit booked ✓</span><span class="tag note">9:30–11:30 AM · Sat timed entry</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">12:30 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Spice Room — Indian Lunch 🍛</div>
+          <div class="tl-desc">3100 E Colfax Ave, Denver (5 min from Botanic Gardens). 4.9★, 3,200+ reviews. Saturday lunch buffet. 101 GF options, full vegan menu.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓ 12:30 PM</span><span class="tag gf">101 GF options</span><span class="tag veg">Full vegan menu</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">~2:30 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Denver Botanic Gardens</div>
+          <div class="tl-desc">1060 E 14th Ave, Capitol Hill. June blooms. Leisurely, beautiful afternoon. ~$20/person.</div>
+          <div class="tl-tags"><span class="tag booked">Planned</span></div>
+        </div>
+      </div>
+      <div class="tl flag">
+        <div class="tl-t">~5 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">⚠ Pack up Airbnb · Load rental car</div>
+          <div class="tl-desc">Return to Airbnb after Botanic Gardens. Pack everything. Check out. You won't return after dinner.</div>
+          <div class="tl-tags"><span class="tag warn">Do before dinner</span><span class="tag warn">No return after Bang Up</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">7:30 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Bang Up To The Elephant — Final Dinner 🐘</div>
+          <div class="tl-desc">Caribbean-inspired, vegetarian-forward. Bags already in car. After dinner, drive straight to DEN.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag veg">Vegetarian-forward</span><span class="tag gf">GF options</span></div>
+          <div class="flag-row">⚠ Wrap up by ~9:15 PM to get to DEN comfortably.</div>
+        </div>
+      </div>
+      <div class="tl flag">
+        <div class="tl-t">~9:15 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">Drive to DEN · Return rental car</div>
+          <div class="tl-desc">~25 min drive. Return car, check in. 2+ hrs before departure.</div>
+          <div class="tl-tags"><span class="tag warn">~25 min drive</span><span class="tag note">Return rental car at DEN</span></div>
+        </div>
+      </div>
+      <div class="tl booked">
+        <div class="tl-t">11:59 PM</div>
+        <div class="tl-c">
+          <div class="tl-name">✈ DEN → PHL Non-stop · Frontier F93340</div>
+          <div class="tl-desc">3h 39m. Arrive Philadelphia 5:38 AM Sun Jun 15. Home by morning.</div>
+          <div class="tl-tags"><span class="tag booked">Booked ✓</span><span class="tag note">Non-stop · F93340</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PAGE 5: LOGISTICS + GF BACKUP LIST
+═══════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="page-title"><span>Logistics &amp; GF Backup Spots</span></div>
+
+  <div class="two-col">
+    <!-- LEFT: LOGISTICS -->
+    <div>
+      <div class="section-lbl">Accommodation &amp; Transport</div>
+      <div class="logi-row"><span class="lbl">Airbnb</span><span class="val">4430 W Hayward Pl, LoHi</span></div>
+      <div class="logi-row"><span class="lbl">Check-in</span><span class="val">Jun 11 (after ~3 PM)</span></div>
+      <div class="logi-row"><span class="lbl">Check-out</span><span class="val">Jun 14, ~5 PM (before dinner)</span></div>
+      <div class="logi-row"><span class="lbl">Rental Car</span><span class="val">DEN pickup Jun 11 ✓</span></div>
+      <div class="logi-row"><span class="lbl">Return Car</span><span class="val">Jun 14, ~9:15 PM at DEN</span></div>
+      <div class="logi-row"><span class="lbl">Flight home</span><span class="val">Jun 14, 11:59 PM · F93340</span></div>
+      <div class="logi-row"><span class="lbl">Arrive PHL</span><span class="val">Jun 15, 5:38 AM</span></div>
+
+      <div class="section-lbl">Drive Times</div>
+      <div class="logi-row"><span class="lbl">LoHi → DEN Airport</span><span class="val">~25 min</span></div>
+      <div class="logi-row"><span class="lbl">LoHi → Red Rocks</span><span class="val">~45 min</span></div>
+      <div class="logi-row"><span class="lbl">Red Rocks → Estes Park</span><span class="val">~1.5 hr</span></div>
+      <div class="logi-row"><span class="lbl">RMNP → Boulder (US-36)</span><span class="val">~45 min</span></div>
+      <div class="logi-row"><span class="lbl">Boulder → LoHi</span><span class="val">~30 min</span></div>
+      <div class="logi-row"><span class="lbl">LoHi → Eldorado Canyon</span><span class="val">~45 min</span></div>
+      <div class="logi-row"><span class="lbl">LoHi → Botanic Gardens</span><span class="val">~15 min</span></div>
+
+      <div class="section-lbl">Dietary Reminders</div>
+      <div class="logi-row"><span class="lbl">Diet</span><span class="val">Fully vegetarian</span></div>
+      <div class="logi-row"><span class="lbl">GF requirement</span><span class="val">Gluten-free friendly</span></div>
+      <div class="logi-row"><span class="lbl">Always confirm</span><span class="val">Tell server about GF</span></div>
+    </div>
+
+    <!-- RIGHT: GF BACKUP LIST -->
+    <div>
+      <div class="section-lbl">GF Backup Spots — Denver LoHi</div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Just BE Kitchen</div>
+          <div class="gf-detail">100% free-from gluten, grain, refined sugar, soy. Walk from Airbnb. B/L/D.</div>
+        </div>
+        <div class="gf-badge safe">100% GF</div>
+      </div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Acova</div>
+          <div class="gf-detail">Owner has celiac. Dedicated GF fryer. Almost everything can be made GF. B/D.</div>
+        </div>
+        <div class="gf-badge safe">Dedicated fryer</div>
+      </div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Linger (LoHi)</div>
+          <div class="gf-detail">Rooftop, global street food, GF items marked, open late. Good backup dinner.</div>
+        </div>
+        <div class="gf-badge friendly">GF-marked menu</div>
+      </div>
+
+      <div class="section-lbl">GF Backup Spots — Estes Park</div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Wapiti Grill</div>
+          <div class="gf-detail">Owner has celiac. Staff trained. One of the safest celiac options in Estes.</div>
+        </div>
+        <div class="gf-badge safe">Owner has celiac</div>
+      </div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Bird &amp; Jim</div>
+          <div class="gf-detail">Highly rated, great GF accommodation. Near downtown Estes. Good lunch stop.</div>
+        </div>
+        <div class="gf-badge friendly">GF-friendly</div>
+      </div>
+      <div class="gf-item">
+        <div>
+          <div class="gf-name">Country Market of Estes Park</div>
+          <div class="gf-detail">Largest natural/organic selection in Estes. GF specialty brands. RMNP snacks.</div>
+        </div>
+        <div class="gf-badge estes">GF snacks</div>
+      </div>
+
+      <div class="section-lbl">Things to Pack / Bring</div>
+      <div class="logi-row"><span class="lbl">For RMNP (Jun 13)</span><span class="val">Layers, snacks, water</span></div>
+      <div class="logi-row"><span class="lbl">For Eldorado (Jun 14)</span><span class="val">Hiking shoes, sunscreen</span></div>
+      <div class="logi-row"><span class="lbl">For all restaurants</span><span class="val">Always confirm GF with server</span></div>
+    </div>
+  </div>
+
+  <div class="footer">Colorado Birthday Trip · June 11–15, 2026 · Printed from colorado-birthday-itinerary.html</div>
+</div>
+
+</body>
+</html>
