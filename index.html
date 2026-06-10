@@ -337,11 +337,12 @@ function closeBdayOverlay() {
       <div class="cal-day" onclick="scrollToDay('day13')">
         <div class="dow">Saturday</div>
         <div class="date-num">13</div>
-        <div class="cal-label">Red Rocks + RMNP</div>
+        <div class="cal-label">RMNP Day · AM = A or B</div>
         <div class="cal-items">
+          <div class="cal-dot pending">⚡ AM: Red Rocks OR Peak to Peak</div>
           <div class="cal-dot booked">🏔 RMNP 4–6 PM</div>
-          <div class="cal-dot booked">🌮 Cozobi Boulder 8:45 PM</div>
           <div class="cal-dot booked">🏔 Pearl St wander ~7:15 PM</div>
+          <div class="cal-dot booked">🌮 Cozobi Boulder 8:45 PM</div>
         </div>
       </div>
       <div class="cal-day" onclick="scrollToDay('day14')">
@@ -538,8 +539,8 @@ function closeBdayOverlay() {
           <div class="day-header">
             <div class="day-num">13</div>
             <div class="day-info">
-              <h2>Saturday — Red Rocks + Rocky Mountain National Park</h2>
-              <div class="day-meta">Estes Park drive · RMNP 4–6 PM booked · Dinner TBD</div>
+              <h2>Saturday — Mountains Day: RMNP + Boulder</h2>
+              <div class="day-meta">Morning: Option A (Red Rocks) or Option B (Peak to Peak + Estes) — decide on the day · RMNP 4–6 PM booked · Cozobi 8:45 PM</div>
             </div>
           </div>
           <div class="timeline">
@@ -548,7 +549,7 @@ function closeBdayOverlay() {
               <div class="tl-body">
                 <div class="tl-card">
                   <div class="tl-name">Rivers &amp; Roads Coffee — Breakfast</div>
-                  <div class="tl-desc">GF food menu, breakfast fries! Heads-up: it's in Clayton (2539 E Bruce Randolph Ave), ~15 min drive northeast — the opposite direction from Red Rocks (~+30 min round trip). Walkable alternative: Hearth Bakery + Coffee, 32nd Ave.</div>
+                  <div class="tl-desc">GF food menu, breakfast fries! Heads-up: it's in Clayton (2539 E Bruce Randolph Ave), ~15 min drive northeast — a detour either way (~+30 min round trip). Walkable alternative: Hearth Bakery + Coffee, 32nd Ave. If going Option A, keep breakfast quick — out the door by 8:15.</div>
                   <div class="tl-tags"><span class="tag confirmed">Planned</span><span class="tag gf">GF menu</span></div>
                   <div class="venue-links">
                     <a href="https://maps.google.com/?q=2539+E+Bruce+Randolph+Ave+Denver+CO+80205" target="_blank" class="venue-link map-link">📍 Map</a>
@@ -557,14 +558,24 @@ function closeBdayOverlay() {
                 </div>
               </div>
             </div>
-            <div class="tl-item booked">
-              <div class="tl-time">~9:30 AM</div>
+            <div class="tl-item pending">
+              <div class="tl-time">Morning</div>
+              <div class="tl-body">
+                <div class="tl-card" style="background: var(--amber-light); border-color: #f0d5a0;">
+                  <div class="tl-name">⚡ Decide on the day: Option A or Option B</div>
+                  <div class="tl-desc">Both routes end at the same fixed points: RMNP entry 4 PM → Boulder ~7:15 → Cozobi 8:45. <strong>A</strong> = see Red Rocks in its only open window of the whole trip (concert day, earlier start, tighter Estes time). <strong>B</strong> = scenic Peak to Peak drive + a relaxed Estes morning. Check weather, energy after the birthday night, and how she feels about an 8:15 start.</div>
+                  <div class="tl-tags"><span class="tag pending">Decide Sat over breakfast</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="tl-item option">
+              <div class="tl-time">Option A</div>
               <div class="tl-body">
                 <div class="tl-card">
-                  <div class="tl-name">Red Rocks Amphitheatre</div>
-                  <div class="tl-desc">Drive 45 min southwest. Hike the Trading Post Trail or just explore the formations. Iconic views.</div>
-                  <div class="tl-tags"><span class="tag confirmed">Planned</span><span class="tag note">~45 min from LoHi</span><span class="tag flag">Concert day</span></div>
-                  <div class="info-note">🎸 Show day: Paul Simon plays Red Rocks tonight (8 PM), and Yoga on the Rocks runs 7–8:30 AM. The amphitheatre usually closes to visitors by ~2 PM (sometimes earlier) for load-in — your ~10:15 AM arrival works, but expect stage setup and busier morning crowds. Trading Post Trail and the park stay open all day. Day-of closure recording: 720-865-2494.</div>
+                  <div class="tl-name">🎸 Red Rocks early window → Estes Park</div>
+                  <div class="tl-desc">Leave Airbnb <strong>8:15 AM</strong> → Red Rocks <strong>9:00</strong>, right as Yoga on the Rocks (7–8:30 AM) clears out. Amphitheatre photos + Trading Post Trail (1.4 mi). Paul Simon plays tonight, so load-in closes the amphitheatre early (usually ~2 PM, can be sooner) — this 9:00–11:15 window is the trip's only shot at it. Out by <strong>11:15</strong> → ~2 hr to Estes Park → lunch downtown ~1:30 → Country Market snacks → RMNP entry 4 PM.</div>
+                  <div class="tl-tags"><span class="tag option">Option A</span><span class="tag flag">Concert day — call first</span><span class="tag note">Only open window of the trip</span></div>
+                  <div class="info-note">📞 Call the closure recording (720-865-2494) at breakfast. If the house is already closed, switch to Option B — no loss.</div>
                   <div class="venue-links">
                     <a href="https://maps.google.com/?q=18300+W+Alameda+Pkwy+Morrison+CO+80465" target="_blank" class="venue-link map-link">📍 Map</a>
                     <a href="https://www.redrocksonline.com" target="_blank" class="venue-link web-link">🌐 Website</a>
@@ -573,24 +584,25 @@ function closeBdayOverlay() {
               </div>
             </div>
             <div class="tl-item option">
-              <div class="tl-time">~12:30 PM</div>
+              <div class="tl-time">Option B</div>
               <div class="tl-body">
                 <div class="tl-card">
-                  <div class="tl-name">Drive to Estes Park (~1.5 hr from Red Rocks)</div>
-                  <div class="tl-desc">Scenic drive north through Boulder and up the canyon. Stop in Estes Park for lunch before RMNP entry.</div>
-                  <div class="tl-tags"><span class="tag note">~1.5 hr drive</span></div>
+                  <div class="tl-name">🏔 Peak to Peak Highway → full Estes morning</div>
+                  <div class="tl-desc">Leave <strong>~9:30 AM</strong> → Peak to Peak Scenic Byway via Nederland (~2 hr 15, Indian Peaks and Longs Peak views the whole way — the scenery is the activity). Estes ~11:45 → Riverwalk + Elkhorn Ave stroll → lunch ~12:45 → <strong>Aerial Tramway</strong> up Prospect Mountain ~2:15 (open 9–5, book a slot at estestram.com) or Lake Estes loop / Stanley Hotel grounds → Country Market snacks → RMNP entry 4 PM.</div>
+                  <div class="tl-tags"><span class="tag option">Option B</span><span class="tag note">Relaxed start</span><span class="tag note">Tramway: book slot morning-of</span></div>
                   <div class="venue-links">
-                    <a href="https://maps.google.com/?q=Estes+Park+CO" target="_blank" class="venue-link map-link">📍 Map</a>
+                    <a href="https://maps.google.com/?q=Peak+to+Peak+Highway+Colorado" target="_blank" class="venue-link map-link">📍 Route</a>
+                    <a href="https://estestram.com" target="_blank" class="venue-link web-link">🌐 Tramway</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="tl-item option">
-              <div class="tl-time">~2 PM</div>
+              <div class="tl-time">~1:30 PM</div>
               <div class="tl-body">
                 <div class="tl-card">
-                  <div class="tl-name">Lunch in Estes Park</div>
-                  <div class="tl-desc">Grab lunch before the RMNP timed entry window. See GF backup spots for Estes options.</div>
+                  <div class="tl-name">Lunch in Estes Park (either option)</div>
+                  <div class="tl-desc">Option A lands here ~1:30, Option B ~12:45. Bird &amp; Jim, Wapiti Grill (owner has celiac — safest), or Poppy's Pizza. See GF backup spots for full list.</div>
                   <div class="tl-tags"><span class="tag note">Before RMNP entry</span><span class="tag gf">See GF backups tab</span></div>
                   <div class="venue-links">
                     <a href="https://maps.google.com/?q=Downtown+Estes+Park+CO+80517" target="_blank" class="venue-link map-link">📍 Map</a>
@@ -799,6 +811,13 @@ function closeBdayOverlay() {
         <!-- OPEN DECISIONS -->
         <div class="card">
           <h3>⚡ Open Decisions</h3>
+          <div class="decision-item">
+            <h4>Jun 13 morning — decide over breakfast</h4>
+            <div class="opts">
+              <div class="opt"><strong>A:</strong> Red Rocks 9:00–11:15 AM — trip's only open window (concert day). Call 720-865-2494 first.</div>
+              <div class="opt"><strong>B:</strong> Peak to Peak scenic drive + Estes tramway/Riverwalk. Book tram slot at estestram.com.</div>
+            </div>
+          </div>
         </div>
 
         <!-- TASKS -->
@@ -844,7 +863,7 @@ function closeBdayOverlay() {
           <h3>⚠ Key Flags</h3>
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <div class="info-note">Jun 13 dinner: Cozobi Fonda Fina, Boulder — 8:45 PM ✓ (100% GF, Michelin Bib Gourmand, on route home)</div>
-            <div class="flag-note">Jun 13 Red Rocks: Paul Simon concert that night — amphitheatre usually closes ~2 PM for load-in. Go in the morning; check 720-865-2494 day-of.</div>
+            <div class="flag-note">Jun 13 morning is a day-of decision: Option A (Red Rocks 9–11:15, only open window — call 720-865-2494 first) or Option B (Peak to Peak + Estes tramway). Both hit RMNP at 4 PM.</div>
             <div class="flag-note">Jun 14: Check out Airbnb in the morning before Eldorado Canyon (booking ends Jun 14). Bags in trunk all day, out of sight. After Bang Up, drive straight to DEN. Wrap dinner by 9:15 PM.</div>
             <div class="flag-note">Jun 14 dinner: Bang Up is at 1310 Pearl St, Capitol Hill — NOT LoHi. ~30–35 min from there to DEN.</div>
           </div>
@@ -1120,8 +1139,8 @@ function closeBdayOverlay() {
           <div class="task-item">
             <div class="task-cb" onclick="toggleTask(this)"></div>
             <div>
-              <div class="task-text">Call Red Rocks closure recording before heading out — Paul Simon concert day</div>
-              <div class="task-day">Jun 13 morning · 720-865-2494</div>
+              <div class="task-text">Decide Option A (Red Rocks — call 720-865-2494 first) or Option B (Peak to Peak + Estes tram — book slot at estestram.com)</div>
+              <div class="task-day">Jun 13 over breakfast</div>
             </div>
           </div>
           <div class="task-item">
